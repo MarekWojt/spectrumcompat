@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "copperagebackport" }
+  ],
+  "values": [
+    "spectrumcompat:copper_golem_head",
+    "spectrumcompat:exposed_copper_golem_head",
+    "spectrumcompat:weathered_copper_golem_head",
+    "spectrumcompat:oxidized_copper_golem_head",
+    "spectrumcompat:waxed_copper_golem_head",
+    "spectrumcompat:waxed_exposed_copper_golem_head",
+    "spectrumcompat:waxed_weathered_copper_golem_head",
+    "spectrumcompat:waxed_oxidized_copper_golem_head"
+  ]
+}

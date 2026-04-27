@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "betterarcheology" }
+  ],
+  "type": "spectrum:enchanter",
+  "time": 300,
+  "required_experience": 100,
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "item": "spectrum:brown_pigment"
+    },
+    {
+      "item": "spectrum:brown_pigment"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:dirt"
+    },
+    {
+      "item": "spectrum:brown_pigment"
+    },
+    {
+      "item": "spectrum:brown_pigment"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:dirt"
+    }
+  ],
+  "result": {
+    "id": "minecraft:enchanted_book",
+    "components": {
+      "stored_enchantments": {
+        "betterarcheology:tunneling": 1
+      }
+    }
+  },
+  "required_advancement": "spectrum:midgame/build_enchanting_structure"
+}

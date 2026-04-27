@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "copperagebackport" }
+  ],
+  "type": "spectrum:spirit_instiller",
+  "group": "memories",
+  "time": 800,
+  "experience": 4.0,
+  "ingredient1": "spectrumcompat:oxidized_copper_golem_head",
+  "ingredient2": "minecraft:oxidized_copper",
+  "center_ingredient": {
+    "tag": "spectrum:memory_bonding_agents",
+    "count": 4
+  },
+  "result": {
+    "id": "spectrum:memory",
+    "components": {
+      "entity_data": { "id": "minecraft:copper_golem", "weather_state": 3, "next_weather_age": -1 },
+      "spectrum:memory": { "ticks_to_manifest": 4 }
+    }
+  },
+  "required_advancement": "spectrum:unlocks/blocks/memories"
+}

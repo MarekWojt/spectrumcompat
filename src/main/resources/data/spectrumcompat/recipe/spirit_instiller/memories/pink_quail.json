@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "deep_aether" }
+  ],
+  "type": "spectrum:spirit_instiller",
+  "group": "memories",
+  "time": 800,
+  "experience": 4.0,
+  "ingredient1": "spectrumcompat:pink_quail_head",
+  "ingredient2": "deep_aether:raw_quail",
+  "center_ingredient": {
+    "tag": "spectrum:memory_bonding_agents",
+    "count": 4
+  },
+  "result": {
+    "id": "spectrum:memory",
+    "components": {
+      "entity_data": { "id": "deep_aether:quail", "Variant": 1 },
+      "spectrum:memory": { "ticks_to_manifest": 4 }
+    }
+  },
+  "required_advancement": "spectrum:unlocks/blocks/memories"
+}

@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "deep_aether" }
+  ],
+  "type": "spectrum:anvil_crushing",
+  "ingredient": [
+    { "item": "deep_aether:sky_tulips" }
+  ],
+  "crushedItemsPerPointOfDamage": 2,
+  "experience": 0.0,
+  "result": {
+    "id": "minecraft:red_dye",
+    "count": 2
+  },
+  "particleEffectIdentifier": "cloud",
+  "soundEventIdentifier": "block.grass.break"
+}

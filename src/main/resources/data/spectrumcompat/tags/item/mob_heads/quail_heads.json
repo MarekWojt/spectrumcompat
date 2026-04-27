@@ -1,0 +1,14 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "deep_aether" }
+  ],
+  "values": [
+    "spectrumcompat:old_green_quail_head",
+    "spectrumcompat:pink_quail_head",
+    "spectrumcompat:purple_quail_head",
+    "spectrumcompat:tropical_blue_quail_head",
+    "spectrumcompat:faded_yellow_quail_head",
+    "spectrumcompat:light_blue_quail_head",
+    "spectrumcompat:copper_quail_head"
+  ]
+}

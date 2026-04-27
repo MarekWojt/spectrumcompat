@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "de.mwojt.spectrumcompat.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockEntityTypeAccessor",
+    "SpectrumSkullBlockMixin",
+    "SpawnerCreatureChangeRecipeMixin",
+    "ServerAdvancementManagerMixin",
+    "LivingEntityVariantLockMixin",
+    "ChickenVariantLockMixin",
+    "CowVariantLockMixin",
+    "PigVariantLockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

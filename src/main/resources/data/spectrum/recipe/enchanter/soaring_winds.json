@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "betterarcheology" }
+  ],
+  "type": "spectrum:enchanter",
+  "time": 300,
+  "required_experience": 100,
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "item": "spectrum:yellow_pigment"
+    },
+    {
+      "item": "spectrum:yellow_pigment"
+    },
+    {
+      "item": "minecraft:phantom_membrane"
+    },
+    {
+      "item": "minecraft:wind_charge"
+    },
+    {
+      "item": "spectrum:yellow_pigment"
+    },
+    {
+      "item": "spectrum:yellow_pigment"
+    },
+    {
+      "item": "minecraft:phantom_membrane"
+    },
+    {
+      "item": "minecraft:wind_charge"
+    }
+  ],
+  "result": {
+    "id": "minecraft:enchanted_book",
+    "components": {
+      "stored_enchantments": {
+        "betterarcheology:soaring_winds": 1
+      }
+    }
+  },
+  "required_advancement": "spectrum:midgame/build_enchanting_structure"
+}

@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "deep_aether" }
+  ],
+  "type": "spectrum:enchantment_upgrade",
+  "bulk_item": {
+    "item": "spectrum:light_blue_pigment"
+  },
+  "enchantment": "deep_aether:gloves_reach",
+  "item_scaling": {
+    "type": "spectrum:indexed",
+    "indexes": [8, 32]
+  },
+  "level_cap": 3,
+  "required_advancement": "spectrum:unlocks/blocks/enchanter",
+  "xp_scaling": {
+    "type": "spectrum:indexed",
+    "indexes": [200, 600]
+  }
+}

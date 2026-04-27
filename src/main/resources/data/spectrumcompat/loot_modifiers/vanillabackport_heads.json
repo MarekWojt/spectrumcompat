@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "vanillabackport" }
+  ],
+  "type": "spectrum:treasure_hunter",
+  "conditions": [],
+  "entries": [
+    { "entity": { "type": "minecraft:happy_ghast" },                                      "head_stack": { "id": "spectrumcompat:happy_ghast_head" },  "drop_chance_per_level": 0.15 },
+    { "entity": { "type": "minecraft:chicken", "nbt": "{variant:\"minecraft:warm\"}" },   "head_stack": { "id": "spectrumcompat:warm_chicken_head" }, "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "minecraft:chicken", "nbt": "{variant:\"minecraft:cold\"}" },   "head_stack": { "id": "spectrumcompat:cold_chicken_head" }, "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "minecraft:cow",     "nbt": "{variant:\"minecraft:warm\"}" },   "head_stack": { "id": "spectrumcompat:warm_cow_head" },     "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "minecraft:cow",     "nbt": "{variant:\"minecraft:cold\"}" },   "head_stack": { "id": "spectrumcompat:cold_cow_head" },     "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "minecraft:pig",     "nbt": "{variant:\"minecraft:warm\"}" },   "head_stack": { "id": "spectrumcompat:warm_pig_head" },     "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "minecraft:pig",     "nbt": "{variant:\"minecraft:cold\"}" },   "head_stack": { "id": "spectrumcompat:cold_pig_head" },     "drop_chance_per_level": 0.02 }
+  ]
+}

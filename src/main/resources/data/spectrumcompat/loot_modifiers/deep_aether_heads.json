@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "deep_aether" }
+  ],
+  "type": "spectrum:treasure_hunter",
+  "conditions": [],
+  "entries": [
+    { "entity": { "type": "deep_aether:aerglow_fish" },                              "head_stack": { "id": "spectrumcompat:aerglow_fish_head" },         "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "deep_aether:quail",           "nbt": "{Variant:0}" },     "head_stack": { "id": "spectrumcompat:old_green_quail_head" },      "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "deep_aether:quail",           "nbt": "{Variant:1}" },     "head_stack": { "id": "spectrumcompat:pink_quail_head" },           "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "deep_aether:quail",           "nbt": "{Variant:2}" },     "head_stack": { "id": "spectrumcompat:purple_quail_head" },         "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "deep_aether:quail",           "nbt": "{Variant:3}" },     "head_stack": { "id": "spectrumcompat:tropical_blue_quail_head" },  "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "deep_aether:quail",           "nbt": "{Variant:4}" },     "head_stack": { "id": "spectrumcompat:faded_yellow_quail_head" },   "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "deep_aether:quail",           "nbt": "{Variant:5}" },     "head_stack": { "id": "spectrumcompat:light_blue_quail_head" },     "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "deep_aether:quail",           "nbt": "{Variant:6}" },     "head_stack": { "id": "spectrumcompat:copper_quail_head" },         "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "deep_aether:venomite" },                                  "head_stack": { "id": "spectrumcompat:venomite_head" },             "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "deep_aether:baby_zephyr" },                               "head_stack": { "id": "spectrumcompat:baby_zephyr_head" },          "drop_chance_per_level": 0.05 },
+    { "entity": { "type": "deep_aether:eots_controller" },                           "head_stack": { "id": "spectrumcompat:eots_controller_head" },      "drop_chance_per_level": 0.25 }
+  ]
+}

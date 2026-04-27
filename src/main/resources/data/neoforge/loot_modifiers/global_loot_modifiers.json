@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "entries": [
+    "spectrumcompat:aether_heads",
+    "spectrumcompat:deep_aether_heads",
+    "spectrumcompat:vanillabackport_heads",
+    "spectrumcompat:copperagebackport_heads"
+  ]
+}

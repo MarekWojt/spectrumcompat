@@ -1,0 +1,15 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "copperagebackport" }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "spectrumcompat:oxidized_copper_golem_head" },
+    { "item": "minecraft:honeycomb" }
+  ],
+  "result": {
+    "id": "spectrumcompat:waxed_oxidized_copper_golem_head",
+    "count": 1
+  }
+}

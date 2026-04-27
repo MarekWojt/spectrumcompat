@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "aether" }
+  ],
+  "type": "spectrum:anvil_crushing",
+  "ingredient": [
+    { "item": "aether:white_flower" }
+  ],
+  "crushedItemsPerPointOfDamage": 2,
+  "experience": 0.0,
+  "result": {
+    "id": "minecraft:white_dye",
+    "count": 2
+  },
+  "particleEffectIdentifier": "cloud",
+  "soundEventIdentifier": "block.grass.break"
+}

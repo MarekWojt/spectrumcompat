@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "aether" }
+  ],
+  "type": "spectrum:treasure_hunter",
+  "conditions": [],
+  "entries": [
+    { "entity": { "type": "aether:phyg" },                                             "head_stack": { "id": "spectrumcompat:phyg_head" },            "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:flying_cow" },                                       "head_stack": { "id": "spectrumcompat:flying_cow_head" },      "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:sheepuff" },                                         "head_stack": { "id": "spectrumcompat:sheepuff_head" },        "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:moa",           "nbt": "{MoaType:\"aether:blue\"}" }, "head_stack": { "id": "spectrumcompat:blue_moa_head" },        "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:moa",           "nbt": "{MoaType:\"aether:white\"}" },"head_stack": { "id": "spectrumcompat:white_moa_head" },       "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:moa",           "nbt": "{MoaType:\"aether:black\"}" },"head_stack": { "id": "spectrumcompat:black_moa_head" },       "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:aerbunny" },                                         "head_stack": { "id": "spectrumcompat:aerbunny_head" },        "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:aerwhale" },                                         "head_stack": { "id": "spectrumcompat:aerwhale_head" },        "drop_chance_per_level": 0.05 },
+    { "entity": { "type": "aether:blue_swet" },                                        "head_stack": { "id": "spectrumcompat:blue_swet_head" },       "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:golden_swet" },                                      "head_stack": { "id": "spectrumcompat:golden_swet_head" },     "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:aechor_plant" },                                     "head_stack": { "id": "spectrumcompat:aechor_plant_head" },    "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:cockatrice" },                                       "head_stack": { "id": "spectrumcompat:cockatrice_head" },      "drop_chance_per_level": 0.05 },
+    { "entity": { "type": "aether:zephyr" },                                           "head_stack": { "id": "spectrumcompat:zephyr_head" },          "drop_chance_per_level": 0.02 },
+    { "entity": { "type": "aether:mimic" },                                            "head_stack": { "id": "spectrumcompat:mimic_head" },           "drop_chance_per_level": 0.05 },
+    { "entity": { "type": "aether:sentry" },                                           "head_stack": { "id": "spectrumcompat:sentry_head" },          "drop_chance_per_level": 0.05 },
+    { "entity": { "type": "aether:valkyrie" },                                         "head_stack": { "id": "spectrumcompat:valkyrie_head" },        "drop_chance_per_level": 0.05 },
+    { "entity": { "type": "aether:valkyrie_queen" },                                   "head_stack": { "id": "spectrumcompat:valkyrie_queen_head" },  "drop_chance_per_level": 0.25 },
+    { "entity": { "type": "aether:fire_minion" },                                      "head_stack": { "id": "spectrumcompat:fire_minion_head" },     "drop_chance_per_level": 0.10 },
+    { "entity": { "type": "aether:sun_spirit" },                                       "head_stack": { "id": "spectrumcompat:sun_spirit_head" },      "drop_chance_per_level": 0.25 }
+  ]
+}

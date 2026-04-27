@@ -1,0 +1,13 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "copperagebackport" }
+  ],
+  "type": "spectrum:treasure_hunter",
+  "conditions": [],
+  "entries": [
+    { "entity": { "type": "minecraft:copper_golem", "nbt": "{weather_state:0}" }, "head_stack": { "id": "spectrumcompat:copper_golem_head" },           "drop_chance_per_level": 0.05 },
+    { "entity": { "type": "minecraft:copper_golem", "nbt": "{weather_state:1}" }, "head_stack": { "id": "spectrumcompat:exposed_copper_golem_head" },   "drop_chance_per_level": 0.05 },
+    { "entity": { "type": "minecraft:copper_golem", "nbt": "{weather_state:2}" }, "head_stack": { "id": "spectrumcompat:weathered_copper_golem_head" }, "drop_chance_per_level": 0.05 },
+    { "entity": { "type": "minecraft:copper_golem", "nbt": "{weather_state:3}" }, "head_stack": { "id": "spectrumcompat:oxidized_copper_golem_head" },  "drop_chance_per_level": 0.05 }
+  ]
+}

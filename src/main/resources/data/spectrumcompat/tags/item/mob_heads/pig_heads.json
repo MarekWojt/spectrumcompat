@@ -1,0 +1,10 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "vanillabackport" }
+  ],
+  "values": [
+    "spectrum:pig_head",
+    "spectrumcompat:warm_pig_head",
+    "spectrumcompat:cold_pig_head"
+  ]
+}
