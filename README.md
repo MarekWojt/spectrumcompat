@@ -10,13 +10,13 @@ Textures are referenced from the source mods' jars at runtime; this mod ships ze
 
 ## Supported mods
 
-| Mod                                                               | What's added                                                                                               |
-| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| [The Aether](https://modrinth.com/mod/the-aether)                 | 19 mob heads (incl. 3 Moa colours), anvil-crushing dye recipes for Aether flowers          |
-| [Deep Aether](https://modrinth.com/mod/deep-aether)               | 11 mob heads (incl. 7 Quail variants), anvil-crushing dye recipes for DA flowers           |
+| Mod                                                               | What's added                                                                                                |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [The Aether](https://modrinth.com/mod/the-aether)                 | 19 mob heads (incl. 3 Moa colours), anvil-crushing dye recipes for Aether flowers                           |
+| [Deep Aether](https://modrinth.com/mod/deep-aether)               | 11 mob heads (incl. 7 Quail variants), anvil-crushing dye recipes for DA flowers                            |
 | [VanillaBackport](https://modrinth.com/mod/vanillabackport)       | Happy Ghast head, warm/cold Chicken/Cow/Pig heads (memory variant-lock), anvil-crushing dyes for VB flowers |
-| [Copper Age Backport](https://modrinth.com/mod/copperagebackport) | 8 Copper Golem heads (4 oxidation × waxed/unwaxed), honeycomb wax recipes                  |
-| [Better Archeology](https://modrinth.com/mod/better-archeology)   | Enchanter recipes for `penetrating_strike`, `tunneling`, `soaring_winds`; disarming exclusive-set          |
+| [Copper Age Backport](https://modrinth.com/mod/copperagebackport) | 8 Copper Golem heads (4 oxidation × waxed/unwaxed), honeycomb wax recipes                                   |
+| [Better Archeology](https://modrinth.com/mod/better-archeology)   | Enchanter recipes for `penetrating_strike`, `tunneling`, `soaring_winds`; disarming exclusive-set           |
 
 Variant heads (Moa, Quail, Copper Golem, Chicken/Cow/Pig) are NBT-filtered, so the right variant drops from the right kill rather than rolling randomly.
 
