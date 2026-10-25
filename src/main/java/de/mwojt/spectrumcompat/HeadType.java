@@ -94,9 +94,12 @@ public enum HeadType implements SkullBlock.Type {
     WARM_PIG("vanillabackport", "minecraft", "pig", "warm_pig", "textures/entity/pig/warm_pig.png"),
     COLD_PIG("vanillabackport", "minecraft", "pig", "cold_pig", "textures/entity/pig/cold_pig.png"),
 
-    // copperagebackport — all 4 oxidation states + 4 waxed equivalents. The unwaxed
-    // four drop from killed entities (filtered by {@code "weather_state"} NBT int
-    // ordinal 0..3). The waxed four never drop — CAB's wax mechanic transforms the
+    // Copper Golem — provided by copperagebackport or vanillabackport >= 1.2
+    // (see CopperGolemSource; activeTypes() special-cases these entries, the
+    // "copperagebackport" requiredModId below is not the whole gate). All 4
+    // oxidation states + 4 waxed equivalents. The unwaxed four drop from killed
+    // entities (filtered by {@code "weather_state"} NBT — int ordinal 0..3 on CAB,
+    // serialized name on VB). The waxed four never drop — the wax mechanic transforms the
     // golem into a permanent statue block, so no killable waxed entity exists. They
     // are instead obtainable via crafting-table recipes (unwaxed + honeycomb →
     // waxed) mirroring vanilla's copper-waxing pattern. All eight share the same
@@ -162,7 +165,8 @@ public enum HeadType implements SkullBlock.Type {
     /**
      * Gate used by the {@code SpectrumCompat} registration loop to decide which types
      * actually get registered as blocks/items. A type is active iff its
-     * {@link #requiredModId} is loaded. Post-registration code paths iterate the
+     * {@link #requiredModId} is loaded — except Copper Golem types, which are
+     * active iff {@link CopperGolemSource#get()} finds a provider. Post-registration code paths iterate the
      * registered-entry maps on {@code SpectrumCompat} ({@code HEAD_ITEMS},
      * {@code FLOOR_BLOCKS}, {@code WALL_BLOCKS}) instead, which are guaranteed by
      * construction to contain exactly the active types. Not safe to call during
@@ -172,6 +176,8 @@ public enum HeadType implements SkullBlock.Type {
     public static Stream<HeadType> activeTypes() {
         ModList modList = ModList.get();
         return Arrays.stream(values())
-                .filter(t -> modList.isLoaded(t.requiredModId));
+                .filter(t -> t.entityId.equals(CopperGolemSource.ENTITY_ID)
+                        ? CopperGolemSource.get() != CopperGolemSource.NONE
+                        : modList.isLoaded(t.requiredModId));
     }
 }

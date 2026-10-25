@@ -4,6 +4,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.WeatheringCopper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.EnumMap;
@@ -58,24 +59,35 @@ public final class HeadLookup {
         VARIANT_APPLIERS.put(HeadType.WARM_PIG,     t -> t.putString("variant", "minecraft:warm"));
         VARIANT_APPLIERS.put(HeadType.COLD_PIG,     t -> t.putString("variant", "minecraft:cold"));
 
-        // Copper Golem — "weather_state" int ordinal (WeatheringCopper$WeatherState).
+        // Copper Golem — "weather_state" is an int ordinal (WeatheringCopper$WeatherState)
+        // on CAB and the WeatherState serialized name on VB >= 1.2; see CopperGolemSource.
         // Waxed variants spawn as their unwaxed oxidation-state equivalent: waxed
         // golem entities don't exist (wax turns the killable entity into a permanent
         // statue block) so we drop the wax bit and keep only the oxidation match.
         // Each Copper Golem applier also sets "next_weather_age" to -1L
-        // (UNSET_WEATHERING_TICK) — without it the tick defaults to 0, causing
+        // (UNSET_WEATHERING_TICK) — without it CAB defaults the tick to 0, causing
         // CopperGolemEntity.updateWeathering to advance the oxidation one step on
         // the first tick after spawn (so {weather_state:0} would spawn as EXPOSED,
         // not UNAFFECTED). -1L tells updateWeathering to initialize a proper
         // random cooldown on its first pass instead of advancing immediately.
-        VARIANT_APPLIERS.put(HeadType.COPPER_GOLEM,                  t -> { t.putInt("weather_state", 0); t.putLong("next_weather_age", -1L); });
-        VARIANT_APPLIERS.put(HeadType.EXPOSED_COPPER_GOLEM,          t -> { t.putInt("weather_state", 1); t.putLong("next_weather_age", -1L); });
-        VARIANT_APPLIERS.put(HeadType.WEATHERED_COPPER_GOLEM,        t -> { t.putInt("weather_state", 2); t.putLong("next_weather_age", -1L); });
-        VARIANT_APPLIERS.put(HeadType.OXIDIZED_COPPER_GOLEM,         t -> { t.putInt("weather_state", 3); t.putLong("next_weather_age", -1L); });
-        VARIANT_APPLIERS.put(HeadType.WAXED_COPPER_GOLEM,            t -> { t.putInt("weather_state", 0); t.putLong("next_weather_age", -1L); });
-        VARIANT_APPLIERS.put(HeadType.WAXED_EXPOSED_COPPER_GOLEM,    t -> { t.putInt("weather_state", 1); t.putLong("next_weather_age", -1L); });
-        VARIANT_APPLIERS.put(HeadType.WAXED_WEATHERED_COPPER_GOLEM,  t -> { t.putInt("weather_state", 2); t.putLong("next_weather_age", -1L); });
-        VARIANT_APPLIERS.put(HeadType.WAXED_OXIDIZED_COPPER_GOLEM,   t -> { t.putInt("weather_state", 3); t.putLong("next_weather_age", -1L); });
+        // VB already falls back to -1L when the key is absent; setting it is harmless.
+        VARIANT_APPLIERS.put(HeadType.COPPER_GOLEM,                  t -> putCopperGolemState(t, WeatheringCopper.WeatherState.UNAFFECTED));
+        VARIANT_APPLIERS.put(HeadType.EXPOSED_COPPER_GOLEM,          t -> putCopperGolemState(t, WeatheringCopper.WeatherState.EXPOSED));
+        VARIANT_APPLIERS.put(HeadType.WEATHERED_COPPER_GOLEM,        t -> putCopperGolemState(t, WeatheringCopper.WeatherState.WEATHERED));
+        VARIANT_APPLIERS.put(HeadType.OXIDIZED_COPPER_GOLEM,         t -> putCopperGolemState(t, WeatheringCopper.WeatherState.OXIDIZED));
+        VARIANT_APPLIERS.put(HeadType.WAXED_COPPER_GOLEM,            t -> putCopperGolemState(t, WeatheringCopper.WeatherState.UNAFFECTED));
+        VARIANT_APPLIERS.put(HeadType.WAXED_EXPOSED_COPPER_GOLEM,    t -> putCopperGolemState(t, WeatheringCopper.WeatherState.EXPOSED));
+        VARIANT_APPLIERS.put(HeadType.WAXED_WEATHERED_COPPER_GOLEM,  t -> putCopperGolemState(t, WeatheringCopper.WeatherState.WEATHERED));
+        VARIANT_APPLIERS.put(HeadType.WAXED_OXIDIZED_COPPER_GOLEM,   t -> putCopperGolemState(t, WeatheringCopper.WeatherState.OXIDIZED));
+    }
+
+    private static void putCopperGolemState(CompoundTag tag, WeatheringCopper.WeatherState state) {
+        if (CopperGolemSource.get() == CopperGolemSource.VANILLA_BACKPORT) {
+            tag.putString("weather_state", state.getSerializedName());
+        } else {
+            tag.putInt("weather_state", state.ordinal());
+        }
+        tag.putLong("next_weather_age", -1L);
     }
 
     /**
