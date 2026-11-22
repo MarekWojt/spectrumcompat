@@ -1,0 +1,28 @@
+name: Release
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@v6.3.0
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v6.4.1
+      - run: ./gradlew build
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          version=$(sed -n 's/^mod_version=//p' gradle.properties)
+          tag="v$version-${GITHUB_SHA::7}"
+          jar="build/libs/spectrumcompat-$version.jar"
+          sha256sum "$jar"
+          gh release create "$tag" "$jar" --title "$tag" --target "$GITHUB_SHA" --generate-notes
